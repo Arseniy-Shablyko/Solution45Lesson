@@ -1,4 +1,5 @@
 #include "util.h"
+#include "logic.h"
 
 int main() {
 	int* pointer;
@@ -11,6 +12,13 @@ int main() {
 
 	init(pointer, size, 20, -20);
 	cout << "Array: " << convert(pointer, size) << endl;
+
+	cout << "Local min exist? - " 
+		<< (find_local_min(pointer, size) ? "Yes" : "No") 
+		<< endl;
+	cout << "Local maxexist? - " 
+		<< (find_local_max(pointer, size) ? "Yes" : "No")
+		<< endl;
 
 	system("pause");
 	return 0;
