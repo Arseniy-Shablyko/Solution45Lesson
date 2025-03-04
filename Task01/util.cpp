@@ -7,8 +7,7 @@ void init(int* array, int size, int b, int a) {
 string convert(int* array, int size) {
 	string array_string = to_string(array[0]);
 	for (int i = 1; i < size; i++) {
-		array_string =
-			array_string + to_string(array[i]) + " ";
+		array_string += to_string(array[i]) + " ";
 	}
 
 	return array_string;

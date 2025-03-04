@@ -1,13 +1,16 @@
 #include "util.h"
 
-#define SIZE 10
-
 int main() {
-	int array[SIZE];
-	init(array, SIZE, 20, -20);
+	int* pointer;
+	int size;
 
-	string array_string = convert(array, SIZE);
-	cout << "Array: " << array_string << endl;
+	cout << "Input size of array: ";
+	cin >> size;
+
+	pointer = new int[size];
+
+	init(pointer, size, 20, -20);
+	cout << "Array: " << convert(pointer, size) << endl;
 
 	system("pause");
 	return 0;
