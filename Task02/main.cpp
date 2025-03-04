@@ -13,12 +13,14 @@ int main() {
 	init(pointer, size, 20, -20);
 	cout << "Array: " << convert(pointer, size) << endl;
 
-	cout << "Local min exist? - " 
-		<< (find_local_min(pointer, size) ? "Yes" : "No") 
-		<< endl;
-	cout << "Local maxexist? - " 
-		<< (find_local_max(pointer, size) ? "Yes" : "No")
-		<< endl;
+	int count;
+	int* indeces_min = get_indexs_local_min(pointer, size, &count);
+
+	cout << "Indeces of local min: " << convert(indeces_min, count) << endl;
+
+	int* indeces_max = get_indexs_local_max(pointer, size, &count);
+
+	cout << "Indeces of local max: " << convert(indeces_max, count) << endl;
 
 	delete[] pointer;
 
